@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+  css reset 网页重置
+  *{
+    margin: 0;
+    padding: 0;
+    border:0;/*搞定安卓 img 丑边框 */
+    vertical-align: baseline; /*垂直对齐  基线 以中心点对齐*/
+  }
+  *，*:after,*:bofore{
+    box-sizing: border-box;
+  }
+  a{
+    color: #007FFF;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  html,body{
+    height: 100%;
+  }
+  body{
+    font-size: 16px;
+    font-family: Helvetica,Arial,STHeiti,sans-serif;
+    color: #fff;
+    background-color: #262423;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  p{
+    margin: 1em 0px;
+  }
+  section{
+    width: 200%;
+    height: 100%;
+    text-rendering: optimizeLegibility;   /*文字渲染优化 */
+    -webkit-font-smoothing:antialiased;
+    text-shadow: 1px 1px 3px #333; /*增强文字立体感 */
+  }
+  article{
+    cursor: pointer;
+    float: left;
+    position: relative;
+    width: 18.8%;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+    overflow: hidden;
+  }
+
+article .bg{
+  position: absolute;
+  top: 0;
+  left: 0;width: 100%;
+  height: 100%;
+  background: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  -webkit-transition:transform 1s, opacity .3s;
+
+  transition:transform 1s, opacity .3s;
+}
+article:hover .bg{
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  height: 100%;
+
+}
+article .inner{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;/*弹性布局*/
+  flex-direction: column;/*垂直分布*/
+  justify-content: center;/*调整内容居中*//*要居中一定要设置弹性布局*/
+
+}
+.title{
+  font-size: 2em;
+}
+.title img{
+  height: 1em;
+}
+.description{
+  margin-bottom: 2em;
+}
+.button{
+  padding: 0.5em 0.8em;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(0,0,0,.2);
+  transition: all .3s;
+}
+.button:active{
+  border-color: #fff;
+  background-color: rgba(0,0,0,.3);
+
+}
+
+
+.juejin .bg{
+  background-image: url(http://ac-mhke0kuv.clouddn.com/eed2fc073c4c55fe.jpg);
+  background-position: left center;
+  height: 100%;
+}
+.xitu .bg{
+  background-image: url(http://ac-mhke0kuv.clouddn.com/9c81da6663ab88c2.jpg);
+  background-position: 20% center;
+
+}
+.xitut .bg{
+  background-image: url(http://ac-mhke0kuv.clouddn.com/a4b40331828da123.jpg);
+  background-position: center center;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  transform-origin: center center;
+}
+.join .bg{
+background-image: url(http://ac-mhke0kuv.clouddn.com/e89dbc6d3002af17.jpg);
+background-position: 80% center;
+}
+.about .bg{
+  background-image: url(http://ac-mhke0kuv.clouddn.com/be8cc4a7b22950ea.jpg);
+  background-position: 100% center;
+}
+footer{
+  position: fixed;
+  padding: .5em;
+  top: 1em;
+  right: 1em;
+  color: pink;
+  font-size: .8em;
+  background: black;
+  opacity: 0.8;
+  transition: opacity .5s;
+}
+footer:hover{
+  opacity: 1.5;
+}
+body::-webkit-scrollbar{
+  width: 2px;
+  height: 5px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #007fff;
+}
+body::-webkit-scrollbar-track{
+  background: black;
+}
+  </style>
+</head>
+<body>
+<section>
+      <article class="juejin">
+        <div class="bg"></div>
+        <div class="inner">
+          <div class="title">
+            <img src="http://ac-mhke0kuv.clouddn.com/b1e86db17032d6db.svg" alt="">
+          </div>
+          <p class="description">挖掘最优秀的互联网技术</p>
+          <p>
+            <a href="" class="button">访问网站</a>
+            <a href="" class="button">下载应用</a>
+            <a href="" class="button">浏览器插件</a>
+          </p>
+        </div>
+      </article>
+      <article class="xitu">
+        <div class="bg"></div>
+        <div class="inner">
+          <div class="title">
+            <img src="http://ac-mhke0kuv.clouddn.com/d9480858d49d4900.svg" alt="">
+          </div>
+          <p class="description">By Makers and For Explorers</p>
+          <p>
+            <a href="" class="button" >访问网站</a>
+          </p>
+        </div>
+      </article>
+      <article class="xitut">
+        <div class="bg"></div>
+        <div class="inner">
+          <div class="title">
+          <img src="http://ac-mhke0kuv.clouddn.com/2ff87d662f19a295.svg" alt="">
+          </div>
+          <p class="description">如何成为一个成功的互联网人才</p>
+          <p>
+            <a href="" class="button">敬请期待</a>
+          </p>
+        </div>
+      </article>
+      <article class="join">
+        <div class="bg"></div>
+        <div class="inner">
+          <div class="title">加入我们</div>
+          <p class="description">一群对技术有追求的人</p>
+          <p>
+            <a href="http://gold.xitu.io/i-want-u" class="button">发简历到 hr@xitu.io</a>
+          </p>
+        </div>
+      </article>
+      <article class="about">
+          <div class="bg"></div>
+          <div class="inner">
+              <div class="title">关于</div>
+              <p class="description">这是你们想要了解的一切</p>
+              <p>
+                <a class="button" href="http://gold.xitu.io/about"><img src="http://ac-mhke0kuv.clouddn.com/61509c59b6367700.png"> Pika pika</a>
+              </p>
+          </div>
+      </article>
+</section>
+<footer>津ICP备1500</footer>
+<script src="main.js"></script>
+</body>
+</html>
